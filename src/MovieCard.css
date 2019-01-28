@@ -10,6 +10,10 @@
 }
 
 .MovieCard img {
-  height: 75%;
+  height: 100%;
   object-fit: contain;
+}
+
+.MovieCard a {
+  height: 75%;
 }
