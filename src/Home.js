@@ -22,14 +22,13 @@ class Home extends Component {
       ...this.state,
       nowPlaying: results.data.results
     });
-    console.log(this.state.nowPlaying.data.results);
   }
 
   render() {
     return (
       <div className="Home">
         {/* card container for modularity */}
-        <CardContainer />
+        <CardContainer nowPlaying={this.state.nowPlaying} />
       </div>
     );
   }

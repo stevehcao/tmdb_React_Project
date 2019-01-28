@@ -7,11 +7,10 @@ class CardContainer extends Component {
     this.state = {};
   }
   render() {
-    return (
-      <div>
-        <MovieCard>Testing</MovieCard>
-      </div>
-    );
+    const movies = this.props.nowPlaying.map(movie => (
+      <MovieCard info={movie} key={movie.id} />
+    ));
+    return <div>{movies}</div>;
   }
 }
 
