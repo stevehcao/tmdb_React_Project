@@ -1,0 +1,15 @@
+.MovieCard {
+  width: 300px;
+  height: 400px;
+  margin: 15px;
+  overflow: auto;
+  box-sizing: border-box;
+  border: 5px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+.MovieCard img {
+  height: 75%;
+  object-fit: contain;
+}

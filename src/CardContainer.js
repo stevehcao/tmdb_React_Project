@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import MovieCard from './MovieCard';
+import './CardContainer.css';
 
 class CardContainer extends Component {
   constructor(props) {
@@ -8,9 +9,9 @@ class CardContainer extends Component {
   }
   render() {
     const movies = this.props.nowPlaying.map(movie => (
-      <MovieCard info={movie} key={movie.id} />
+      <MovieCard movie={movie} key={movie.id} />
     ));
-    return <div>{movies}</div>;
+    return <div className="CardContainer">{movies}</div>;
   }
 }
 
