@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 class Header extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      searchTerm: '',
+      toSearch: false
+    };
   }
 
   handleChange = evt => {
@@ -15,6 +18,11 @@ class Header extends Component {
 
   handleSubmit = evt => {
     evt.preventDefault();
+    // this set state is async and does not always immediately update component
+    // use callback to guarantee fire after the update has been applied
+    this.setState(() => ({
+      toSearch: true
+    }));
   };
 
   render() {
