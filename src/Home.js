@@ -33,6 +33,7 @@ class Home extends Component {
     return (
       <div className="home">
         <Header />
+        <h2>Movies Currently Showing!</h2>
         {/* card container for modularity */}
         <CardContainer moviesArr={this.state.moviesArr} />
       </div>
