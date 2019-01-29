@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
+import './Header.css';
 
 class Header extends Component {
   constructor(props) {
@@ -20,21 +22,22 @@ class Header extends Component {
     evt.preventDefault();
     // this set state is async and does not always immediately update component
     // use callback to guarantee fire after the update has been applied
-    this.setState(() => ({
-      toSearch: true
-    }));
+    this.props.history.push(`/search/${this.state.searchMovie}`);
+    // this.setState(() => ({
+    //   toSearch: true
+    // }));
   };
 
   render() {
     // send to search page if looking for movies
-    if (this.state.toSearch === true) {
-      return <Redirect to={`/search/${this.state.searchMovie}`} />;
-    }
+    // if (this.state.toSearch === true) {
+    //   return <Redirect to={`/search/${this.state.searchMovie}`} />;
+    // }
 
     return (
       <div className="header">
         {/* nav bar */}
-        <div>Movies!!!</div>
+        <h2>Movies!!!</h2>
         <Link to="/">
           <div>Home</div>
         </Link>
@@ -60,4 +63,4 @@ class Header extends Component {
   }
 }
 
-export default Header;
+export default withRouter(Header);

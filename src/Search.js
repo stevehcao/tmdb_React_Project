@@ -28,6 +28,7 @@ class Search extends Component {
       <div className="search">
         <Header />
         {/* fill out with found movie cards */}
+        <CardContainer moviesArr={this.state.foundMoviesArr} />
         {/* maybe display placeholder if no movies found */}
       </div>
     );
