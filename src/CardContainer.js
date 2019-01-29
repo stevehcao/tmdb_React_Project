@@ -11,7 +11,7 @@ class CardContainer extends Component {
     const movies = this.props.nowPlaying.map(movie => (
       <MovieCard movie={movie} key={movie.id} />
     ));
-    return <div className="CardContainer">{movies}</div>;
+    return <div className="card-container">{movies}</div>;
   }
 }
 

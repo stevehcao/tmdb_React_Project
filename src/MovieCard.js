@@ -7,7 +7,7 @@ class MovieCard extends Component {
     return (
       <div className="MovieCard">
         {/* title, rating, pic/poster, desc */}
-        <Link to="/movieDetails">
+        <Link to={`/movieDetails/${this.props.movie.id}`}>
           <img
             src={`https://image.tmdb.org/t/p/w500/${
               this.props.movie.poster_path
