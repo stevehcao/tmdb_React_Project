@@ -37,7 +37,7 @@ class Header extends Component {
     return (
       <div className="header">
         {/* nav bar */}
-        <h2>Movies!!!</h2>
+        <div>Movies!!!</div>
         <Link to="/">
           <div>Home</div>
         </Link>

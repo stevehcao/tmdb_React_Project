@@ -1,0 +1,9 @@
+.App {
+  background-color: #66dc96;
+  color: #13386c;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #ecf6e0;
+}

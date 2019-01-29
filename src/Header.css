@@ -1,3 +1,9 @@
 .header {
-  margin: 23px;
+  margin-bottom: 23px;
+  background-color: #13386c;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  color: #eef6e0;
+  font-weight: bold;
 }

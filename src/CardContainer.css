@@ -4,4 +4,6 @@
   flex-wrap: wrap;
   width: 80%;
   height: 50%;
+  /* center webpage */
+  margin: auto;
 }
