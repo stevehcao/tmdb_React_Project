@@ -5,7 +5,7 @@ class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      searchTerm: '',
+      searchMovie: '',
       toSearch: false
     };
   }
@@ -26,6 +26,11 @@ class Header extends Component {
   };
 
   render() {
+    // send to search page if looking for movies
+    if (this.state.toSearch === true) {
+      return <Redirect to={`/search/${this.state.searchMovie}`} />;
+    }
+
     return (
       <div className="header">
         {/* nav bar */}
@@ -43,7 +48,7 @@ class Header extends Component {
                 id="search"
                 name="searchMovie"
                 className="searchMovie"
-                value={this.state.searchTerm}
+                value={this.state.searchMovie}
                 placeholder="Search for Movies"
               />
             </label>

@@ -9,7 +9,7 @@ class Home extends Component {
     this.state = {
       name: 'cat',
       whatever: '',
-      nowPlaying: [] // expect to get an array of object, each object is a current movie playing
+      moviesArr: [] // expect to get an array of object, each object is a current movie playing
     };
   }
 
@@ -22,7 +22,7 @@ class Home extends Component {
       this.setState({
         // destructure in order to keep everything else in state
         ...this.state,
-        nowPlaying: results.data.results
+        moviesArr: results.data.results
       });
     } catch (err) {
       console.log(err);
@@ -34,7 +34,7 @@ class Home extends Component {
       <div className="home">
         <Header />
         {/* card container for modularity */}
-        <CardContainer nowPlaying={this.state.nowPlaying} />
+        <CardContainer moviesArr={this.state.moviesArr} />
       </div>
     );
   }

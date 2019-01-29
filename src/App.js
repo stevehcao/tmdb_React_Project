@@ -16,7 +16,7 @@ class App extends Component {
             {/* also can use render props to pass component into Route */}
             <Route exact path="/" component={Home} />
             <Route path="/movieDetails/:id" component={MovieDetails} />
-            <Route exact path="/search" component={Search} />
+            <Route path="/search/:query" component={Search} />
           </Switch>
         </Router>
       </div>

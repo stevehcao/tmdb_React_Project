@@ -8,7 +8,7 @@ class CardContainer extends Component {
     this.state = {};
   }
   render() {
-    const movies = this.props.nowPlaying.map(movie => (
+    const movies = this.props.moviesArr.map(movie => (
       <MovieCard movie={movie} key={movie.id} />
     ));
     return <div className="card-container">{movies}</div>;
