@@ -10,6 +10,8 @@ class Header extends Component {
       searchMovie: '',
       toSearch: false
     };
+
+    // this.handleSubmit = this.handleSubmit.bind(this);  // if you aren't using arrow syntax
   }
 
   handleChange = evt => {

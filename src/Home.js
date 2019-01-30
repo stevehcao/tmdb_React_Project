@@ -7,8 +7,6 @@ class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: 'cat',
-      whatever: '',
       moviesArr: [] // expect to get an array of object, each object is a current movie playing
     };
   }

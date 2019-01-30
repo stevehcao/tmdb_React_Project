@@ -11,7 +11,6 @@ class App extends Component {
       <div className="App">
         <Router>
           <Switch>
-            {/* switch will make it exact path */}
             {/* if there is no exact path to "/" even /moviedetails will direct to homepage */}
             {/* also can use render props to pass component into Route */}
             <Route exact path="/" component={Home} />
