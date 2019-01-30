@@ -39,10 +39,14 @@ class Header extends Component {
     return (
       <div className="header">
         {/* nav bar, can be its' own component or not.  will evaluate as I add more */}
-        <div>Movies!!!</div>
-        <Link to="/">
-          <div>Home</div>
-        </Link>
+        <div>
+          <b>Movies!!!</b>
+        </div>
+        <nav>
+          <Link to="/">Home</Link>
+          <Link to="/">Another Page</Link>
+          <Link to="/">Discover Page</Link>
+        </nav>
         {/* search bar */}
         <div className="searchBar">
           <form onSubmit={this.handleSubmit}>

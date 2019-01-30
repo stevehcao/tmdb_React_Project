@@ -8,6 +8,7 @@ class Home extends Component {
     super(props);
     this.state = {
       moviesArr: [] // expect to get an array of object, each object is a current movie playing
+      // can have a isLoading flag
     };
   }
 
