@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import CardContainer from './CardContainer';
-import Header from './Header';
+import Header from './containers/Header';
 import axios from 'axios';
+import { connect } from 'react-redux';
+import { search } from '../store/actions';
 
 class Search extends Component {
   state = {
@@ -52,4 +54,13 @@ class Search extends Component {
   }
 }
 
-export default Search;
+function mapStatetoProps(reduxState) {
+  return {
+    search: reduxState.search
+  };
+}
+
+export default connect(
+  mapStatetoProps,
+  { search }
+)(Search);

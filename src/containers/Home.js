@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import CardContainer from './CardContainer';
+import CardContainer from '../CardContainer';
 import Header from './Header';
 import axios from 'axios';
+// import { connect } from 'react-redux';
 
-class Home extends Component {
+export class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {

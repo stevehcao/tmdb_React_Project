@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Header from './Header';
+import Header from './containers/Header';
 import axios from 'axios';
 
 class MovieDetails extends Component {
@@ -20,7 +20,7 @@ class MovieDetails extends Component {
   }
   render() {
     return (
-      <div className="MovieDeatils">
+      <div className="MovieDetails">
         <Header />
         Movie Details
       </div>
