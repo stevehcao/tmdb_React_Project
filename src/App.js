@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Home from './containers/Home';
 import MovieDetails from './MovieDetails';
-import Search from './Search';
+import Search from './containers/Search';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';

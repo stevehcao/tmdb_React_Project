@@ -6,6 +6,8 @@ export function configureStore() {
   const store = createStore(
     rootReducer,
     compose(
+      // thunk allows you to use async with redux
+      // a thunk is a function that returns a function
       applyMiddleware(thunk),
       // take out dev tools in production
       window.__REDUX_DEVTOOLS_EXTENSION__ &&
